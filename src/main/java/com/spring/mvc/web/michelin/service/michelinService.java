@@ -19,23 +19,23 @@ public class michelinService {
 
     private final michelinMapper michelinRepository;
 
-
+//글 쓰기
     public void register(Michelin michelin) {
         michelinRepository.save(michelin);
     }
 
-
-    public List<Michelin> getBoardList() {
+//전체보기
+    public List<Michelin> getMichelinList() {
         return michelinRepository.findAll();
     }
 
-
+//삭제
     public void delete(int board_num) {
         michelinRepository.remove(board_num);
     }
 
-
-    public Michelin getOneScoreList(int board_num) {
+//하나 찾기
+    public Michelin getOneMichelinList(int board_num) {
         return michelinRepository.findOne(board_num);
     }
 

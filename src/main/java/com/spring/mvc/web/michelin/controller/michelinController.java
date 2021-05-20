@@ -15,7 +15,7 @@ import java.util.List;
 
 @Controller
 @Log4j2
-@RequestMapping("/board")
+@RequestMapping("/michelin")
 public class michelinController {
 
     private final michelinService michelinService;
@@ -28,46 +28,46 @@ public class michelinController {
     //메인 화면
     @GetMapping("/list")
     public String list(Model model) {
-        List<Michelin> boardList = michelinService.getBoardList();
-        model.addAttribute("List", boardList);
-        return "/board/list";
+        List<Michelin> michelinList = michelinService.getMichelinList();
+        model.addAttribute("List", michelinList);
+        return "/michelin/list";
     }
 
     //작성화면
     @GetMapping("/write")
     public String write() {
-        return "/board/write";
+        return "/michelin/write";
     }
 
     //작성 요청
     @PostMapping("/write")
     public String write(Michelin michelin) {
         michelinService.register(michelin);
-        return "redirect:/board/list";
+        return "redirect:/michelin/list";
     }
 
     //삭제 진행
     @GetMapping("/delete")
     public String delete(int board_num) {
         michelinService.delete(board_num);
-        return "redirect:/board/list";
+        return "redirect:/michelin/list";
     }
 
     //글 내용 보기
     @GetMapping("/content")
     public String content(int board_num, Model model) {
-        Michelin oneBoardList = michelinService.getOneScoreList(board_num);
-        model.addAttribute("board", oneBoardList);
+        Michelin oneMichelinList = michelinService.getOneMichelinList(board_num);
+        model.addAttribute("michelin", oneMichelinList);
 
-        return "/board/content";
+        return "/michelin/content";
     }
 
     //글 수정 하기
     @GetMapping("/modify")
     public String modify(int board_num, Model model) {
-        Michelin oneScoreList = michelinService.getOneScoreList(board_num);
-        model.addAttribute("board", oneScoreList);
-        return "/board/modify";
+        Michelin oneMichelinList = michelinService.getOneMichelinList(board_num);
+        model.addAttribute("michelin", oneMichelinList);
+        return "/michelin/modify";
     }
 
     //수정 전송
@@ -75,7 +75,7 @@ public class michelinController {
     public String modify(int board_num, String title, String content, String writer, int star) {
         michelinService.modify(board_num, title, content, writer, star);
 
-        return "redirect:/board/content?board_num=" + board_num;
+        return "redirect:/michelin/content?board_num=" + board_num;
     }
 
 
