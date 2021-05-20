@@ -1,24 +1,20 @@
-com/spring/mvc/web/board/domain/Board.java
- com.spring.mvc.web.board.domain.Board
+com/spring/mvc/web/config/DataBaseConfig.java
+ com.spring.mvc.web.config.DataBaseConfig
 com/spring/mvc/web/WebApplication.java
  com.spring.mvc.web.WebApplication
 com/spring/mvc/web/ServletInitializer.java
  com.spring.mvc.web.ServletInitializer
-com/spring/mvc/web/config/DataBaseConfig.java
- com.spring.mvc.web.config.DataBaseConfig
-com/spring/mvc/web/board/repository/BoardMapper.java
- com.spring.mvc.web.board.repository.BoardMapper
-com/spring/mvc/web/board/domain/cmMichelin.java
- com.spring.mvc.web.board.domain.cmMichelin
-com/spring/mvc/web/request/RequestController.java
- com.spring.mvc.web.request.RequestController
-com/spring/mvc/web/request/User.java
- com.spring.mvc.web.request.User
-com/spring/mvc/web/response/ResponseController.java
- com.spring.mvc.web.response.ResponseController
-com/spring/mvc/web/board/service/BoardService.java
- com.spring.mvc.web.board.service.BoardService
-com/spring/mvc/web/board/repository/cmMichelinMapper.java
- com.spring.mvc.web.board.repository.cmMichelinMapper
-com/spring/mvc/web/board/controller/BoardController.java
- com.spring.mvc.web.board.controller.BoardController
+com/spring/mvc/web/michelin/repository/cmMichelinMapper.java
+ com.spring.mvc.web.michelin.repository.cmMichelinMapper
+com/spring/mvc/web/michelin/repository/MichelinRepository.java
+ com.spring.mvc.web.michelin.repository.MichelinRepository
+com/spring/mvc/web/michelin/domain/CmMichelin.java
+ com.spring.mvc.web.michelin.domain.CmMichelin
+com/spring/mvc/web/michelin/domain/Michelin.java
+ com.spring.mvc.web.michelin.domain.Michelin
+com/spring/mvc/web/michelin/controller/michelinController.java
+ com.spring.mvc.web.michelin.controller.michelinController
+com/spring/mvc/web/michelin/repository/michelinMapper.java
+ com.spring.mvc.web.michelin.repository.michelinMapper
+com/spring/mvc/web/michelin/service/michelinService.java
+ com.spring.mvc.web.michelin.service.michelinService
