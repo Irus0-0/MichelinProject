@@ -18,15 +18,11 @@ public interface BoardMapper {
 
     //전체 정보 조회 기능
     List<Board> findAll();
-
+    //전체 정보 조회 - 별높은순
     List<Board> starFindAll();
 
     //글 수정
     void modify(int board_num, String title, String content, String writer);
 
-    //댓글 작성
-    void cmSave(int board_num, String cm_writer, String cm_content);
 
-    //댓글 삭제
-    void cmRemove(int board_num, int cm_num);
 }

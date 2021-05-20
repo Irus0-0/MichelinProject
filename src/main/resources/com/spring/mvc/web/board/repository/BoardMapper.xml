@@ -54,18 +54,7 @@
         SET title = #{title} , content = #{content}, writer = #{writer}
         WHERE board_num = #{board_num}
     </update>
-    <!--    댓글 작성-->
-    <insert id="cmSave">
-        INSERT INTO cm_michelin
-        (board_num, cm_writer, cm_content)
-        VALUES
-        (seq_cmMichelin.nextval, #{cm_writer}, #{cm_content})
-    </insert>
-    <!-- 댓글 삭제-->
-    <delete id="cmRemove">
-        DELETE FROM cm_michelin
-        WHERE board_num = #{board_num} and cm_num = #{cm_num}
-    </delete>
+
 
     <!--<resultMap id="boardMap" type="com.spring.mvc.web.board.domain.Board">
         &lt;!&ndash;        property 속성에는 자바 필드명, column 은 테이블 칼럼명&ndash;&gt;
