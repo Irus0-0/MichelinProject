@@ -10,9 +10,9 @@
 </head>
 <body>
 
-    <h1>게시글 등록</h1>
+    <h1>평가 등록</h1>
 
-    <form action="/board/write" method="post">
+    <form action="/michelin/write" method="post">
         <p>
             # 작성자: <input type="text" name="writer">${michelin.writer}<br>
             # 제목: <input type="text" name="title">${michelin.title}<br>
@@ -24,7 +24,7 @@
         </p>
     </form>
     
-    <a href="/board/list">글 목록보기</a>
+    <a href="/michelin/list">글 목록보기</a>
 
 </body>
 </html>

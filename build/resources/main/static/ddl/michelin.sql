@@ -13,6 +13,8 @@ CREATE TABLE michelin (
     CONSTRAINT pk_michelin PRIMARY KEY (board_num)
 );
 
+CREATE SEQUENCE SEQ_cm_michelin;
+
 CREATE TABLE cm_michelin (
      board_num NUMBER(10), --글번호
      cm_num NUMBER(10), --댓글 번호
