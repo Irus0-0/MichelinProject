@@ -16,25 +16,22 @@
     <h1>게시글 목록</h1>
     <table border="1">
         <tr>
-            <td>번호</td>
+            <td>글번호</td>
             <td>작성자</td>
             <td>제목</td>
-            <td>조회수</td>
-            <td>추천수</td>
+            <td>별점</td>
             <td>비고</td>
-            
-            
+
+
         </tr>
 
         <c:forEach var="board" items="${List}">
         <tr>
-            <td>${board.boardNo}</td>
+            <td>${board.board_num}</td>
             <td>${board.writer}</td>
             <td>
                 <a href="/board/content?boardNo=${board.boardNo}">${board.content}</a>
             </td>
-            <td>${board.view}</td>
-            <td>${board.recommendation}</td>
             <td>
                 <a href="/board/delete?boardNo=${board.boardNo}">[삭제]</a>
             </td>
