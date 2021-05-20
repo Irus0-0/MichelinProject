@@ -2,7 +2,7 @@ package com.spring.mvc.web.board.controller;
 
 import com.spring.mvc.web.board.domain.Board;
 import com.spring.mvc.web.board.service.BoardService;
-import com.spring.mvc.web.score.domain.Score;
+
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -58,7 +58,7 @@ public class BoardController {
     public String content(int boardNo, Model model) {
         Board oneBoardList = boardService.getOneScoreList(boardNo);
         model.addAttribute("board", oneBoardList);
-        boardService.addView(boardNo);
+
         return "/board/content";
     }
 
@@ -74,14 +74,14 @@ public class BoardController {
     @PostMapping("/modify")
     public String modify(int boardNo, String title, String content, String writer) {
         boardService.modify(boardNo,title,content,writer);
-        boardService.minusView(boardNo);
+
         return "redirect:/board/content?boardNo=" + boardNo;
     }
     //글 추천하기
     @GetMapping("/recommendation")
     public String recommendation(int boardNo) {
-        boardService.recommendation(boardNo);
-        boardService.minusView(boardNo);
+
+
         return "redirect:/board/content?boardNo=" + boardNo;
     }
 
