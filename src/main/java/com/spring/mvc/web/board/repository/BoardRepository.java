@@ -1,3 +1,4 @@
+/*
 package com.spring.mvc.web.board.repository;
 
 import com.spring.mvc.web.board.domain.Board;
@@ -31,3 +32,4 @@ public interface BoardRepository {
     void recommendation(int boardNo);
 
 }
+*/
