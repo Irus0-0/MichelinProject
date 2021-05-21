@@ -1,8 +1,6 @@
 package com.spring.mvc.web.michelin.controller;
 
-import com.spring.mvc.web.michelin.domain.CmMichelin;
 import com.spring.mvc.web.michelin.domain.Michelin;
-import com.spring.mvc.web.michelin.service.cmMichelinService;
 import com.spring.mvc.web.michelin.service.michelinService;
 
 import lombok.extern.log4j.Log4j2;
@@ -30,8 +28,17 @@ public class michelinController {
 
     //메인 화면
     @GetMapping("/list")
-    public String list(Model model) {
-        List<Michelin> michelinList = michelinService.getMichelinList();
+    public String list(Criteria criteria, Model model) {
+//        List<Michelin> michelinList = michelinService.getMichelinList(criteria);
+        model.addAttribute("List",michelinService.getArticles(criteria));
+        model.addAttribute("count",michelinService.getCount());
+        model.addAttribute("pageMaker", new PageMaker(criteria, michelinService.getCount()));
+        return "/michelin/list";
+    }
+    //별점 정렬 화면
+    @GetMapping("list/star")
+    public String starList(Model model) {
+        List<Michelin> michelinList = michelinService.getStarMichelinList();
         model.addAttribute("List", michelinList);
         return "/michelin/list";
     }
@@ -75,7 +82,7 @@ public class michelinController {
 
     //수정 전송
     @PostMapping("/modify")
-    public String modify(int board_num, String title, String content, String writer, int star) {
+    public String modify(int board_num, String title, String content, String writer, double star) {
         michelinService.modify(board_num, title, content, writer, star);
 
         return "redirect:/michelin/content?board_num=" + board_num;
