@@ -10,6 +10,8 @@ com/spring/mvc/web/michelin/repository/cmMichelinMapper.java
  com.spring.mvc.web.michelin.repository.cmMichelinMapper
 com/spring/mvc/web/common/paging/Criteria.java
  com.spring.mvc.web.common.paging.Criteria
+com/spring/mvc/web/michelin/repository/michelinMapper.java
+ com.spring.mvc.web.michelin.repository.michelinMapper
 com/spring/mvc/web/michelin/domain/Michelin.java
  com.spring.mvc.web.michelin.domain.Michelin
 com/spring/mvc/web/michelin/repository/MichelinRepository.java
@@ -22,3 +24,5 @@ com/spring/mvc/web/michelin/repository/michelinMapper.java
  com.spring.mvc.web.michelin.repository.michelinMapper
 com/spring/mvc/web/michelin/service/michelinService.java
  com.spring.mvc.web.michelin.service.michelinService
+com/spring/mvc/web/michelin/controller/michelinController.java
+ com.spring.mvc.web.michelin.controller.michelinController

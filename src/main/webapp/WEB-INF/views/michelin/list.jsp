@@ -36,7 +36,7 @@
 			font-size: 1.1em;
 		}
 	</style>
-    
+
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
@@ -53,11 +53,11 @@
 
     <table border="1">
         <tr>
-            <td>글번호</td>
+            <td><a href="/michelin/list">글번호</a></td>
             <td>작성자</td>
             <td>상호명</td>
             <td>한줄평</td>
-            <td>별점</td>
+            <td><a href="/michelin/list/star">별점</a></td>
             <td>작성일</td>
             <td>비고</td>
 
