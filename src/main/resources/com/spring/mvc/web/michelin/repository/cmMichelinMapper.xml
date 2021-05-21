@@ -9,9 +9,9 @@
     <!--    댓글 작성-->
     <insert id="cmSave">
         INSERT INTO cm_michelin
-        (board_num, cm_writer, cm_content)
+        (board_num, cm_num, cm_writer, cm_content)
         VALUES
-        (seq_cmMichelin.nextval, #{cm_writer}, #{cm_content})
+        (#{board_num}, seq_cm_Michelin.nextval, #{cm_writer}, #{cm_content})
     </insert>
 
     <!-- 댓글 삭제-->

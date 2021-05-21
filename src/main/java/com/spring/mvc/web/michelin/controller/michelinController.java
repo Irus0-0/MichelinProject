@@ -1,6 +1,8 @@
 package com.spring.mvc.web.michelin.controller;
 
+import com.spring.mvc.web.michelin.domain.CmMichelin;
 import com.spring.mvc.web.michelin.domain.Michelin;
+import com.spring.mvc.web.michelin.service.cmMichelinService;
 import com.spring.mvc.web.michelin.service.michelinService;
 
 import lombok.extern.log4j.Log4j2;
@@ -24,6 +26,7 @@ public class michelinController {
     public michelinController(michelinService michelinService) {
         this.michelinService = michelinService;
     }
+
 
     //메인 화면
     @GetMapping("/list")

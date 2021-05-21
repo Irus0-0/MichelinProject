@@ -8,10 +8,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 @Log4j2
-public class cmmichelinService {
+public class cmMichelinService {
 
     private final cmMichelinMapper cmMichelinRepository;
 
@@ -21,7 +23,13 @@ public class cmmichelinService {
     }
 
     //댓글 삭제
-    public void delete(int board_num, int cm_num) {
+    public void cmdelete(int board_num, int cm_num) {
         cmMichelinRepository.cmRemove(board_num, cm_num);
+    }
+
+    //댓글 전체보기
+    public List<CmMichelin> getCmMichelinList() {
+
+        return cmMichelinRepository.findAll();
     }
 }

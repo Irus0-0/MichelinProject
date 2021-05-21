@@ -35,11 +35,12 @@
 	<a href="/michelin/modify?board_num=${michelin.board_num}">글 수정하기</a>
 	<%-- <a href="/michelin/recommendation?board_num=${michelin.board_num}">글 추천</a> --%>
 
-	<form action="/michelin/write" method="post">
+	<form action="/cmmichelin/write" method="post">
+		<input type="hidden" name="board_num" value="${michelin.board_num}">
         <p>
-            # 작성자: <input type="text" name="writer">${cmmichelin.writer}<br>
+            # 작성자: <input type="text" name="cm_writer">${cmmichelin.writer}<br>
             # 내용: <br>
-            <textarea rows="5" cols="30" name="content">${cmmichelin.content}</textarea>
+            <textarea rows="5" cols="30" name="cm_content">${cmmichelin.content}</textarea>
             <br>
             <input type="submit" value="등록">
         </p>
@@ -56,9 +57,9 @@
 
 		<c:forEach var="cmmichelin" items="${List}">
             <tr>
-                <td>${cmmichelin.board_num}</td>
-				<td>${cmmichelin.board_num}</td>
-                <td>${cmmichelin.writer}</td>
+                <td>${cmmichelin.cm_num}</td>
+				<td>${cmmichelin.cm_writer}</td>
+                <td>${cmmichelin.cm_content}</td>
 				<td>
                     <a href="/cmmichelin/delete?cm_num=${cmmichelin.cm_num}">[삭제]</a>
                 </td>
