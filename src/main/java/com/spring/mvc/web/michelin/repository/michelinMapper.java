@@ -9,6 +9,7 @@ import java.util.List;
 @Mapper
 public interface michelinMapper {
 
+
     //게시글 목록 가져오기
 
     //1. 페이징 없는 버전

@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/main.css">
     <title>Insert title here</title>
     <style>
 		.pagination {
@@ -53,11 +55,11 @@
 
     <table border="1">
         <tr>
-            <td><a href="/michelin/list">글번호</a></td>
+            <td>글번호</td>
             <td>작성자</td>
             <td>상호명</td>
             <td>한줄평</td>
-            <td><a href="/michelin/list/star">별점</a></td>
+            <td>별점</td>
             <td>작성일</td>
             <td>비고</td>
 
@@ -65,6 +67,19 @@
         </tr>
 
         <c:forEach var="michelin" items="${List}">
+            <tr>
+                <td>${michelin.board_num}</td>
+                <td>${michelin.writer}</td>
+                <td>${michelin.title}</td>
+                <td>
+                    <a href="/michelin/content?board_num=${michelin.board_num}">${michelin.one_cm}</a>
+                </td>
+                <td>${michelin.star}</td>
+                <td>${michelin.leg_date}</td>
+                <td>
+                    <a href="/michelin/delete?board_num=${michelin.board_num}">[삭제]</a>
+                </td>
+            </tr>
             <tr>
                 <td>${michelin.board_num}</td>
                 <td>${michelin.writer}</td>

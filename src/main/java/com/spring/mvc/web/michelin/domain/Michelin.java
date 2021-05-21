@@ -20,6 +20,7 @@ public class Michelin {
     private double star;
     private Date leg_date;
     private int comment_cnt;
+    private String one_cm;
 
     public Michelin() {
         this.board_num = ++sequence;
@@ -31,5 +32,6 @@ public class Michelin {
         this.title = title;
         this.content = content;
         this.star = star;
+        this.one_cm = one_cm;
     }
 }
