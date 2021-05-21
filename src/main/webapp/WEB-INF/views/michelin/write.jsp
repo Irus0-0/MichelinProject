@@ -48,13 +48,13 @@
 
     <h1>평가 등록</h1>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <form action="/michelin/write" method="post">
         <p>
             # 작성자: <input type="text" name="writer">${michelin.writer}<br>
             # 상호명: <input type="text" name="title">${michelin.title}<br>
             # 한줄평: <input type="text" name="one_cm">${michelin.one_cm}<br>
-
-            # 별점 : <input type="range" name="star" min="1" max="5" step="0.5">
+            <!-- # 별점 : <input type="range" name="star" min="1" max="5" step="0.5"><br> -->
             <!-- # 별점: <select name="star">
                     <option value="5">5</option>
                     <option value="4">4</option>
@@ -63,8 +63,8 @@
                     <option value="1">1</option>
             </select> -->
             <br>
-            # 제목: <input type="text" name="title">${michelin.title}<br>
-            # 별점: <input type="number" min="0.0" max="10.0" step="0.1" name="star">${michelin.star}★<br>
+            <!-- # 제목: <input type="text" name="title">${michelin.title}<br> -->
+            # 별점: <input type="number" min="0.0" max="10.0" step="0.1" name="star">${michelin.star}★<br> -->
             # 내용: <br>
             <textarea rows="5" cols="30" name="content">${michelin.content}</textarea>
             <br>
