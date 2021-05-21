@@ -26,7 +26,7 @@ public class Michelin {
         this.board_num = ++sequence;
     }
 
-    public Michelin(String writer, String title, String content, double star) {
+    public Michelin(String writer, String title, String content, double star, String one_cm) {
         this();
         this.writer = writer;
         this.title = title;

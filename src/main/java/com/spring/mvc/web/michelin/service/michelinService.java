@@ -48,8 +48,8 @@ public class michelinService {
     }
 
     //수정
-    public void modify(int board_num, String title, String content, String writer, double star) {
-        michelinRepository.modify(board_num, title, content, writer, star);
+    public void modify(int board_num, String title, String content, String writer, double star, String one_cm) {
+        michelinRepository.modify(board_num, title, content, writer, star, one_cm);
     }
 
 //    //총 게시물 수 확인

@@ -34,7 +34,7 @@ public interface michelinMapper {
     List<Michelin> starFindAll();
 
     //글 수정
-    void modify(int board_num, String title, String content, String writer, double star);
+    void modify(int board_num, String title, String content, String writer, double star , String one_cm);
 
     //총 게시글 조회기능
     int getCount();

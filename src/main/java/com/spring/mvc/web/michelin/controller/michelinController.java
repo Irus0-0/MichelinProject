@@ -84,8 +84,8 @@ public class michelinController {
 
     //수정 전송
     @PostMapping("/modify")
-    public String modify(int board_num, String title, String content, String writer, double star) {
-        michelinService.modify(board_num, title, content, writer, star);
+    public String modify(int board_num, String title, String content, String writer, double star, String one_cm) {
+        michelinService.modify(board_num, title, content, writer, star, one_cm);
 
         return "redirect:/michelin/content?board_num=" + board_num;
     }
