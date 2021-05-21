@@ -1,6 +1,7 @@
 package com.spring.mvc.web.michelin.service;
 
 
+import com.spring.mvc.web.common.paging.Criteria;
 import com.spring.mvc.web.michelin.domain.Michelin;
 import com.spring.mvc.web.michelin.repository.michelinMapper;
 
@@ -12,12 +13,15 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Log4j2
+//@Log4j2
 public class michelinService {
 
-
-
     private final michelinMapper michelinRepository;
+
+//    게시글 목록 가져오기
+    public List<Michelin> getArticles(Criteria criteria) {
+        return michelinRepository.getArticles(criteria);
+    }
 
 //글 쓰기
     public void register(Michelin michelin) {
@@ -44,5 +48,13 @@ public class michelinService {
         michelinRepository.modify(board_num, title, content, writer, star);
     }
 
+//    //총 게시물 수 확인
+//    public int getTotal(){
+//        return michelinRepository.getTotalCount();
+//    }
 
+    //게시글 건수 조회 기능
+    public int getCount(){
+        return michelinRepository.getCount();
+    }
 }
