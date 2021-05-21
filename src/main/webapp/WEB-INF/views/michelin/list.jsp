@@ -21,6 +21,7 @@
             <td>상호명</td>
             <td>한줄평</td>
             <td>별점</td>
+            <td>작성일</td>
             <td>비고</td>
 
 
@@ -35,6 +36,8 @@
                 <a href="/michelin/content?board_num=${michelin.board_num}">${michelin.content}</a>
             </td>
             <td>${michelin.star}</td>
+            <td>${michelin.leg_date}</td>
+
             <td>
                 <a href="/michelin/delete?board_num=${michelin.board_num}">[삭제]</a>
             </td>
