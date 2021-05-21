@@ -79,21 +79,7 @@
                 <td>
                     <a href="/michelin/delete?board_num=${michelin.board_num}">[삭제]</a>
                 </td>
-            </tr>
-            <tr>
-                <td>${michelin.board_num}</td>
-                <td>${michelin.writer}</td>
-                <td>${michelin.title}</td>
-                <td>
-                    <a href="/michelin/content?board_num=${michelin.board_num}">${michelin.content}</a>
-                </td>
-                <td>${michelin.star}</td>
-                <td>${michelin.leg_date}</td>
-
-                <td>
-                    <a href="/michelin/delete?board_num=${michelin.board_num}">[삭제]</a>
-                </td>
-            </tr>
+            </tr>            
         </c:forEach>
     </table>
 

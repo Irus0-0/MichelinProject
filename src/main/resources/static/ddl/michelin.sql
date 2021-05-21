@@ -35,3 +35,7 @@ FROM
     WHERE rownum <= 10)
 WHERE rn > 0
 ;
+
+--한줄평 컬럼추가
+ALTER TABLE michelin
+ADD one_cm VARCHAR2(40) NOT NULL;
