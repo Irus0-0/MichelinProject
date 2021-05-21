@@ -13,6 +13,7 @@
         VALUES
         (seq_cmMichelin.nextval, #{cm_writer}, #{cm_content})
     </insert>
+
     <!-- 댓글 삭제-->
     <delete id="cmRemove">
         DELETE FROM cm_michelin

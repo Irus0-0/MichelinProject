@@ -24,3 +24,14 @@ CREATE TABLE cm_michelin (
      CONSTRAINT pk_cm_michelin PRIMARY KEY (cm_num),
      CONSTRAINT fk_board_num FOREIGN KEY (board_num) REFERENCES michelin (board_num)
 );
+
+-- 페이징
+SELECT
+    board_no, writer, title, content
+FROM
+    (SELECT /*+INDEX_DESC(board pk_board)*/
+        rownum rn, board_no, writer, title, content
+    FROM board
+    WHERE rownum <= 10)
+WHERE rn > 0
+;

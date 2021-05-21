@@ -17,19 +17,21 @@ public class Michelin {
     private String writer;
     private String title;
     private String content;
-    private int star;
+    private double star;
     private Date leg_date;
     private int comment_cnt;
+    private String one_cm;
 
     public Michelin() {
         this.board_num = ++sequence;
     }
 
-    public Michelin(String writer, String title, String content, int star) {
+    public Michelin(String writer, String title, String content, int star, String one_cm) {
         this();
         this.writer = writer;
         this.title = title;
         this.content = content;
         this.star = star;
+        this.one_cm = one_cm;
     }
 }

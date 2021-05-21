@@ -7,6 +7,7 @@ import java.util.List;
 
 @Mapper
 public interface michelinMapper {
+
     //글 저장 기능
     void save(Michelin michelin);
 
@@ -18,6 +19,7 @@ public interface michelinMapper {
 
     //전체 정보 조회 기능
     List<Michelin> findAll();
+
     //전체 정보 조회 - 별높은순
     List<Michelin> starFindAll();
 

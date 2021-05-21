@@ -8,6 +8,8 @@ com/spring/mvc/web/ServletInitializer.java
  com.spring.mvc.web.ServletInitializer
 com/spring/mvc/web/michelin/repository/cmMichelinMapper.java
  com.spring.mvc.web.michelin.repository.cmMichelinMapper
+com/spring/mvc/web/michelin/controller/michelinController.java
+ com.spring.mvc.web.michelin.controller.michelinController
 com/spring/mvc/web/michelin/domain/Michelin.java
  com.spring.mvc.web.michelin.domain.Michelin
 com/spring/mvc/web/michelin/repository/MichelinRepository.java
@@ -16,5 +18,9 @@ com/spring/mvc/web/michelin/repository/michelinMapper.java
  com.spring.mvc.web.michelin.repository.michelinMapper
 com/spring/mvc/web/michelin/service/michelinService.java
  com.spring.mvc.web.michelin.service.michelinService
-com/spring/mvc/web/michelin/controller/michelinController.java
- com.spring.mvc.web.michelin.controller.michelinController
+com/spring/mvc/web/michelin/repository/cmMichelinRepository.java
+ com.spring.mvc.web.michelin.repository.cmMichelinRepository
+com/spring/mvc/web/michelin/service/cmmichelinService.java
+ com.spring.mvc.web.michelin.service.cmmichelinService
+com/spring/mvc/web/michelin/controller/cmmichelinController.java
+ com.spring.mvc.web.michelin.controller.cmmichelinController

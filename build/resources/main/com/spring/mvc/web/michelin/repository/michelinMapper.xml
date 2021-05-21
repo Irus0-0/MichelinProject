@@ -9,9 +9,9 @@
     <!--    id 속성에는 매퍼 인터페이스의 메서드명을 적음-->
     <insert id="save">
         INSERT INTO michelin
-        (board_num, writer, title, content, star)
+        (board_num, writer, title, content, star, one_cm)
         VALUES
-        (seq_michelin.nextval, #{writer}, #{title}, #{content}, #{star})
+        (seq_michelin.nextval, #{writer}, #{title}, #{content}, #{star}, #{one_cm})
     </insert>
 
     <!--    글 삭제 기능-->
