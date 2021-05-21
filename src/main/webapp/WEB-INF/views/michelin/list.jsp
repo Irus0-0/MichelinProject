@@ -24,6 +24,7 @@
             <td>작성일</td>
             <td>비고</td>
 
+
         </tr>
 
         <c:forEach var="michelin" items="${List}">
