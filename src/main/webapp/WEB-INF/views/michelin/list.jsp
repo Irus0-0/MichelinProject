@@ -16,11 +16,11 @@
     <h1>미슐랭 목록</h1>
     <table border="1">
         <tr>
-            <td>글번호</td>
+            <td><a href="/michelin/list">글번호</a></td>
             <td>작성자</td>
             <td>상호명</td>
             <td>한줄평</td>
-            <td>별점</td>
+            <td><a href="/michelin/list/star">별점</a></td>
             <td>작성일</td>
             <td>비고</td>
 
@@ -35,7 +35,7 @@
             <td>
                 <a href="/michelin/content?board_num=${michelin.board_num}">${michelin.content}</a>
             </td>
-            <td>${michelin.star}</td>
+            <td>${michelin.star}★</td>
             <td>${michelin.leg_date}</td>
 
             <td>
@@ -48,6 +48,8 @@
         <p>
             <a href="/michelin/write">게시글 작성하기</a>
         </p>
+        
+        
 
 </body>
 

@@ -16,31 +16,34 @@ import java.util.List;
 public class michelinService {
 
 
-
     private final michelinMapper michelinRepository;
 
-//글 쓰기
+    //글 쓰기
     public void register(Michelin michelin) {
         michelinRepository.save(michelin);
     }
 
-//전체보기
+    //전체보기
     public List<Michelin> getMichelinList() {
         return michelinRepository.findAll();
     }
 
-//삭제
+    //별점 조회 보기
+    public List<Michelin> getStarMichelinList(){
+        return michelinRepository.starFindAll();
+    }
+    //삭제
     public void delete(int board_num) {
         michelinRepository.remove(board_num);
     }
 
-//하나 찾기
+    //하나 찾기
     public Michelin getOneMichelinList(int board_num) {
         return michelinRepository.findOne(board_num);
     }
 
     //수정
-    public void modify(int board_num, String title, String content, String writer, int star) {
+    public void modify(int board_num, String title, String content, String writer, double star) {
         michelinRepository.modify(board_num, title, content, writer, star);
     }
 

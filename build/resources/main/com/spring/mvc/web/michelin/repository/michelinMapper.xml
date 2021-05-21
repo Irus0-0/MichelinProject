@@ -32,7 +32,7 @@
     <!--    전체 조회 기능-->
     <select id="findAll" resultType="com.spring.mvc.web.michelin.domain.Michelin">
         SELECT * FROM michelin
-<!--        ORDER BY board_num DESC-->
+        ORDER BY board_num DESC
     </select>
 
     <!-- 별점 순서 조회-->
@@ -51,7 +51,7 @@
     <!--    글 수정-->
     <update id="modify">
         UPDATE michelin
-        SET title = #{title} , content = #{content}, writer = #{writer}
+        SET title = #{title} , content = #{content}, writer = #{writer}, star = #{star}
         WHERE board_num = #{board_num}
     </update>
 

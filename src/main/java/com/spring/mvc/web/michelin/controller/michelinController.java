@@ -32,6 +32,13 @@ public class michelinController {
         model.addAttribute("List", michelinList);
         return "/michelin/list";
     }
+    //별점 정렬 화면
+    @GetMapping("list/star")
+    public String starList(Model model) {
+        List<Michelin> michelinList = michelinService.getStarMichelinList();
+        model.addAttribute("List", michelinList);
+        return "/michelin/list";
+    }
 
     //작성화면
     @GetMapping("/write")
@@ -72,7 +79,7 @@ public class michelinController {
 
     //수정 전송
     @PostMapping("/modify")
-    public String modify(int board_num, String title, String content, String writer, int star) {
+    public String modify(int board_num, String title, String content, String writer, double star) {
         michelinService.modify(board_num, title, content, writer, star);
 
         return "redirect:/michelin/content?board_num=" + board_num;

@@ -17,7 +17,7 @@
 		# 글번호: ${michelin.board_num} <br>
 		# 작성자: <input type="text" name="writer" value="${michelin.writer}"><br>
 		# 제목: <input type="text" name="title" value="${michelin.title}"><br>
-		# 별점: <input type="text" name="star" value="${michelin.star}"><br>
+		# 별점: <input type="text" min="0.0" max="10.0" step="0.1"name="star" value="${michelin.star}"><br>
 		# 내용: <br>
 		 <textarea rows="5" cols="30" name="content">${michelin.content}</textarea>	
 		<br>

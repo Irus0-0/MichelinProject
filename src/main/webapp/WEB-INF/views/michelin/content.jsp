@@ -16,7 +16,7 @@
 	# 글번호: ${michelin.board_num}<br>
 	# 작성자:  ${michelin.writer}<br>
 	# 제목: ${michelin.title}<br>
-	# 별점: ${michelin.star}<br>
+	# 별점: ${michelin.star}★<br>
 	<%-- # 추천수:${michelin.recommendation} <br>
 	# 조회수:${michelin.view} <br> --%>
 	# 내용: <br>
