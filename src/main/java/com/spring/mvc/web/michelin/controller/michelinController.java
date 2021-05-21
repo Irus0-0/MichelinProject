@@ -1,5 +1,7 @@
 package com.spring.mvc.web.michelin.controller;
 
+import com.spring.mvc.web.common.paging.Criteria;
+import com.spring.mvc.web.common.paging.PageMaker;
 import com.spring.mvc.web.michelin.domain.Michelin;
 import com.spring.mvc.web.michelin.service.michelinService;
 
@@ -27,9 +29,11 @@ public class michelinController {
 
     //메인 화면
     @GetMapping("/list")
-    public String list(Model model) {
-        List<Michelin> michelinList = michelinService.getMichelinList();
-        model.addAttribute("List", michelinList);
+    public String list(Criteria criteria, Model model) {
+//        List<Michelin> michelinList = michelinService.getMichelinList(criteria);
+        model.addAttribute("List",michelinService.getArticles(criteria));
+        model.addAttribute("count",michelinService.getCount());
+        model.addAttribute("pageMaker", new PageMaker(criteria, michelinService.getCount()));
         return "/michelin/list";
     }
 

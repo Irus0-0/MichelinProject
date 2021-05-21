@@ -35,6 +35,20 @@
 <!--        ORDER BY board_num DESC-->
     </select>
 
+    <!-- 2. 페이징 쿼리 적용   -->
+    <select id="getArticles" resultType="com.spring.mvc.web.michelin.domain.Michelin">
+        <![CDATA[
+            SELECT
+                board_num, writer, title, content, star, leg_date
+            FROM
+                (SELECT
+                    rownum rn, board_num, writer, title, content, star, leg_date
+                FROM michelin
+                WHERE rownum <= #{page} * #{amount})
+            WHERE rn > (#{page} - 1) * #{amount}
+        ]]>
+    </select>
+
     <!-- 별점 순서 조회-->
     <select id="starFindAll" resultType="com.spring.mvc.web.michelin.domain.Michelin">
         SELECT * FROM michelin
@@ -47,7 +61,6 @@
         WHERE board_num = #{board_num}
     </select>
 
-
     <!--    글 수정-->
     <update id="modify">
         UPDATE michelin
@@ -55,6 +68,10 @@
         WHERE board_num = #{board_num}
     </update>
 
+    <!--    총 정보 건수 조회 -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(*) FROM michelin
+    </select>
 
     <!--<resultMap id="boardMap" type="com.spring.mvc.web.michelin.domain.michelinard">
         &lt;!&ndash;        property 속성에는 자바 필드명, column 은 테이블 칼럼명&ndash;&gt;
