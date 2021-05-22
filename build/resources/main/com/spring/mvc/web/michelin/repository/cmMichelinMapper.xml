@@ -20,6 +20,19 @@
         WHERE board_num = #{board_num} and cm_num = #{cm_num}
     </delete>
 
+    <!-- 본문 댓글 전체 삭제-->
+    <delete id="cmRemoveAll">
+        DELETE FROM cm_michelin
+        WHERE board_num = #{board_num}
+    </delete>
+
+    <!--  댓글 전체조회 기능-->
+    <select id="findAll" resultType="com.spring.mvc.web.michelin.domain.CmMichelin">
+        SELECT * FROM cm_michelin
+        WHERE board_num = #{board_num}
+        ORDER BY cm_num DESC
+    </select>
+
     <!--<resultMap id="boardMap" type="com.spring.mvc.web.michelin.domain.michelinard">
         &lt;!&ndash;        property 속성에는 자바 필드명, column 은 테이블 칼럼명&ndash;&gt;
         <result property="boardNo" column="board_no"/>

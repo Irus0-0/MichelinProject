@@ -27,9 +27,13 @@ public class cmMichelinService {
         cmMichelinRepository.cmRemove(board_num, cm_num);
     }
 
-    //댓글 전체보기
-    public List<CmMichelin> getCmMichelinList() {
+    public void cmDeleteAll(int board_num) {
+        cmMichelinRepository.cmRemoveAll(board_num);
+    }
 
-        return cmMichelinRepository.findAll();
+    //댓글 전체보기
+    public List<CmMichelin> getCmMichelinList(int board_num) {
+
+        return cmMichelinRepository.findAll(board_num);
     }
 }

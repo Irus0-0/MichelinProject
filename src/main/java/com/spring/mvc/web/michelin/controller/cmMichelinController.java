@@ -35,18 +35,17 @@ public class cmMichelinController {
 
     //삭제 진행
     @GetMapping("/delete")
-    @ResponseBody
-    public String delete(int board_num, int cm_num) {
-        cmMichelinService.cmdelete(board_num, cm_num);
-        return "redirect:/michelin/content";
+    public String delete(int board_num,int cm_num) {
+        cmMichelinService.cmdelete(board_num,cm_num);
+        return "redirect:/michelin/content?board_num=" + board_num;
     }
 
-    //댓글 화면
-    @GetMapping("/list")
-    public String list(Model model) {
-        List<CmMichelin> cmMichelinList = cmMichelinService.getCmMichelinList();
-        model.addAttribute("List", cmMichelinList);
-        return "/michelin/list";
-    }
+//    //댓글 화면
+//    @GetMapping("/list")
+//    public String list(int board_num, Model model) {
+//        List<CmMichelin> cmMichelinList = cmMichelinService.getCmMichelinList(board_num);
+//        model.addAttribute("List", cmMichelinList);
+//        return "/michelin/list";
+//    }
 
 }
