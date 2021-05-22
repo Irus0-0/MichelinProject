@@ -38,12 +38,12 @@ public class michelinController {
         return "/michelin/list";
     }
     //별점 정렬 화면
-    @GetMapping("list/star")
+    /*@GetMapping("list/star")
     public String starList(Model model) {
         List<Michelin> michelinList = michelinService.getStarMichelinList();
         model.addAttribute("List", michelinList);
         return "/michelin/list";
-    }
+    }*/
 
     //작성화면
     @GetMapping("/write")

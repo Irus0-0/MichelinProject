@@ -6,25 +6,25 @@ com/spring/mvc/web/WebApplication.java
  com.spring.mvc.web.WebApplication
 com/spring/mvc/web/michelin/repository/cmMichelinMapper.java
  com.spring.mvc.web.michelin.repository.cmMichelinMapper
-com/spring/mvc/web/michelin/controller/michelinController.java
- com.spring.mvc.web.michelin.controller.michelinController
+com/spring/mvc/web/michelin/repository/cmMichelinRepository.java
+ com.spring.mvc.web.michelin.repository.cmMichelinRepository
 com/spring/mvc/web/ServletInitializer.java
  com.spring.mvc.web.ServletInitializer
-com/spring/mvc/web/common/paging/Criteria.java
- com.spring.mvc.web.common.paging.Criteria
+com/spring/mvc/web/config/DataBaseConfig.java
+ com.spring.mvc.web.config.DataBaseConfig
 com/spring/mvc/web/michelin/domain/Michelin.java
  com.spring.mvc.web.michelin.domain.Michelin
+com/spring/mvc/web/michelin/repository/MichelinRepository.java
+ com.spring.mvc.web.michelin.repository.MichelinRepository
+com/spring/mvc/web/michelin/controller/cmMichelinController.java
+ com.spring.mvc.web.michelin.controller.cmMichelinController
+com/spring/mvc/web/michelin/controller/michelinController.java
+ com.spring.mvc.web.michelin.controller.michelinController
+com/spring/mvc/web/common/paging/Criteria.java
+ com.spring.mvc.web.common.paging.Criteria
 com/spring/mvc/web/michelin/repository/michelinMapper.java
  com.spring.mvc.web.michelin.repository.michelinMapper
 com/spring/mvc/web/common/paging/PageMaker.java
  com.spring.mvc.web.common.paging.PageMaker
-com/spring/mvc/web/config/DataBaseConfig.java
- com.spring.mvc.web.config.DataBaseConfig
-com/spring/mvc/web/michelin/controller/cmMichelinController.java
- com.spring.mvc.web.michelin.controller.cmMichelinController
 com/spring/mvc/web/michelin/service/michelinService.java
  com.spring.mvc.web.michelin.service.michelinService
-com/spring/mvc/web/michelin/repository/cmMichelinRepository.java
- com.spring.mvc.web.michelin.repository.cmMichelinRepository
-com/spring/mvc/web/michelin/repository/MichelinRepository.java
- com.spring.mvc.web.michelin.repository.MichelinRepository

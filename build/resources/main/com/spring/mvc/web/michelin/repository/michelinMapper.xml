@@ -39,10 +39,10 @@
     <select id="getArticles" resultType="com.spring.mvc.web.michelin.domain.Michelin">
         <![CDATA[
             SELECT
-                board_num, writer, title, content, star, leg_date
+                board_num, writer, title, content, star, leg_date, one_cm
             FROM
                 (SELECT
-                    rownum rn, board_num, writer, title, content, star, leg_date
+                    rownum rn, board_num, writer, title, content, star, leg_date, one_cm
                 FROM michelin
                 WHERE rownum <= #{page} * #{amount})
             WHERE rn > (#{page} - 1) * #{amount}

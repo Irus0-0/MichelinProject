@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -75,7 +76,7 @@
                     <a href="/michelin/content?board_num=${michelin.board_num}">${michelin.one_cm}</a>
                 </td>
                 <td>${michelin.star}</td>
-                <td>${michelin.leg_date}</td>
+                <td><fmt:formatDate pattern="MM월 dd일 HH시" value="${michelin.leg_date}" /></td>
                 <td>
                     <a href="/michelin/delete?board_num=${michelin.board_num}">[삭제]</a>
                 </td>

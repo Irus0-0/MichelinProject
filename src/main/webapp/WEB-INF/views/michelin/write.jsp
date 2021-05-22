@@ -65,7 +65,7 @@
             <br>
             <!-- # 제목: <input type="text" name="title">${michelin.title}<br> -->
             # 별점: <input type="number" min="0.0" max="10.0" step="0.1" name="star">${michelin.star}★<br> -->
-            # 내용: <br>
+            # 평가: <br>
             <textarea rows="5" cols="30" name="content">${michelin.content}</textarea>
             <br>
             <input type="submit" value="등록">
