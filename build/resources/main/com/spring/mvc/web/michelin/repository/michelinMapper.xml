@@ -46,6 +46,7 @@
                 FROM michelin
                 WHERE rownum <= #{page} * #{amount})
             WHERE rn > (#{page} - 1) * #{amount}
+            ORDER BY board_num DESC
         ]]>
     </select>
 

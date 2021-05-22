@@ -14,6 +14,9 @@ public interface cmMichelinMapper {
     //댓글 삭제
     void cmRemove(int board_num, int cm_num);
 
+    //댓글 삭제
+    void cmRemoveAll(int board_num);
+
     //댓글 전체보기
-    List<CmMichelin> findAll();
+    List<CmMichelin> findAll(int board_num);
 }

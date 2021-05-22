@@ -49,22 +49,22 @@
     <h4>댓글보기</h4>
     <table border="1">
         <tr>
-            <td>댓글번호</td>
             <td>작성자</td>
             <td>댓글내용</td>
 			<td>비고</td>
         </tr>
 
-		<c:forEach var="cmmichelin" items="${List}">
+		<a href="#">${List}</a>
+		<c:forEach var="cmMichelin" items="${cmMichelin}">
             <tr>
-                <td>${cmmichelin.cm_num}</td>
-				<td>${cmmichelin.cm_writer}</td>
-                <td>${cmmichelin.cm_content}</td>
+				<td>${cmMichelin.cm_writer}</td>
+                <td>${cmMichelin.cm_content}</td>
 				<td>
-                    <a href="/cmmichelin/delete?cm_num=${cmmichelin.cm_num}">[삭제]</a>
+                    <a href="/cmmichelin/delete?board_num=${michelin.board_num}&cm_num=${cmMichelin.cm_num}">[삭제]</a>
                 </td>
 			</tr>
 		</c:forEach>
+		
 
 </body>
 
