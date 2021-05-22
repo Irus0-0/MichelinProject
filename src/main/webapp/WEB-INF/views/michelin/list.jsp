@@ -53,9 +53,37 @@
 
     <li>총 게시글 수 : ${count}개</li>
 
+    <!-- <div class="all">
+        <li class="border">
+          <div class="michelin-item">
+            <div class="cover"></div>
+            <div class="info">
+              <p class="onecm">
+                  ${michelin.one_cm}
+              </p>
+              <p class="writer">${michelin.writer}</p>
+            </div>
+          </div>
+        </li>
+    </div> -->
 
-    <table border="1">
-        <tr>
+
+    <!-- <div class="all">
+        <li class="border flip">
+          <div class="michelin-item">
+            <div class="cove"></div>
+            <div class="info">
+              <p class="onecm>
+                <a href="/michelin/content?board_num=${michelin.board_num}">${michelin.one_cm}</a>
+              </p>
+              <p class="cmwriter">${michelin.writer}</p>
+            </div>
+          </div>
+        </li>
+    </div> -->
+
+     <table border="1"> 
+         <tr>
             <td>글번호</td>
             <td>작성자</td>
             <td>상호명</td>
@@ -65,7 +93,7 @@
             <td>비고</td>
 
 
-        </tr>
+        </tr> 
 
         <c:forEach var="michelin" items="${List}">
             <tr>
@@ -82,7 +110,7 @@
                 </td>
             </tr>            
         </c:forEach>
-    </table>
+    </table> 
 
     <!-- 페이지 영역 -->
     <ul class="pagination">
