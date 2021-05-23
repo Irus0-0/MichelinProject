@@ -33,7 +33,7 @@ public class michelinService {
         return michelinRepository.findAll();
     }
 
-    //별점 조회 보기
+    //별점 높은순 보기
     public List<Michelin> getStarMichelinList(){
         return michelinRepository.starFindAll();
     }
