@@ -156,7 +156,7 @@
 	}
 
 	h1.con {
-		  margin-left: 35%;
+		  margin-left: 45%;
 	}
 
 	.table-common>table th, .table-common>table td {
@@ -212,7 +212,7 @@
 	}
 
 	.article-detail > table td:last-child {
-		padding-right: 30px;
+		padding-right: 39px;
 	}
 
 	.article-detail > .article-writer {
@@ -341,7 +341,7 @@
 	<br>
 	<h1 class="con">평가 등록하기</h1>
     <br>
-	<form action="/michelin/modify" method="post">
+	<form action="/michelin/list" method="post">
 		<input type="hidden" name="board_num" value="${michelin.board_num}">
 		<section class="article-detail table-common con row">
 			<!-- <div class="article-writer cell">
@@ -355,17 +355,21 @@
 					<tr class="article-title">
 						<th>제목</th>
 						<td colspan="5"><input type="text" name="title" value="${michelin.title}" placeholder="제목을 입력하세요."></td>
-                        <th>
-                            <td colspan="5"><input type="submit" value="등록" class="send"></td>
-                        </th>
+                        <th>작성자</th>
+						<td colspan="6"><input type="text" name="writer" value="${michelin.writer}" placeholder="닉네임을 입력하세요."></td>
+                        <td></td>
+                        
 					</tr>
 					<tr class="article-info">
 						<th>한줄평</th>
-						<td colspan="2"><input type="text" name="one_cm" value="${michelin.one_cm}" placeholder="20자 내외로 입력하세요."></td>
+						<td><input type="text" name="one_cm" value="${michelin.one_cm}" placeholder="20자 내외로 입력하세요."></td>
 						<th>별점</th>
-						<td colspan="2"><input type="number" min="0.0" max="10.0" step="0.1"name="star" value="${michelin.star}" placeholder="별점"></td>
-						<th>작성자</th>
-						<td><input type="text" name="writer" value="${michelin.writer}" placeholder="닉네임을 입력하세요."></td>
+						<td colspan="4"><input type="number" min="0.0" max="10.0" step="0.1"name="star" value="${michelin.star}" placeholder="별점"></td>
+                        <th>
+                            <td colspan="5"><input type="submit" value="등록" class="send"></td>
+                        </th>
+						
+                        <td></td>
 					</tr>
 					<tr class="article-body">
 						<td colspan="4">
