@@ -4,14 +4,8 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="/css/main.css">
-    <title>Insert title here</title>
-    <style>
+    <head>
+     <style>
 		.pagination {
 			width: 60%;
 			margin-top: 10px;
@@ -53,9 +47,8 @@
 
     <li>총 게시글 수 : ${count}개</li>
 
-
-    <table border="1">
-        <tr>
+      <table border="1"> 
+         <tr>
             <td>글번호</td>
             <td>작성자</td>
             <td>상호명</td>
@@ -65,7 +58,7 @@
             <td>비고</td>
 
 
-        </tr>
+        </tr> 
 
         <c:forEach var="michelin" items="${List}">
             <tr>
@@ -82,7 +75,7 @@
                 </td>
             </tr>            
         </c:forEach>
-    </table>
+    </table>  
 
     <!-- 페이지 영역 -->
     <ul class="pagination">

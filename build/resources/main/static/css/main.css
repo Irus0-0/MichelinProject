@@ -1,4 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
 
-body {
-    color : #808080;
+/* reset */
+a {
+    color: inherit;
+    text-decoration: none;
 }
+button, input {
+    outline: none;
+    border: none;
+}
+
+/* common */
+.wrap {
+    font: 15px "Noto Sans KR" , sans-serif;
+}
+
+.hide {
+    display: none !important;
+
+}
+
+/* header */
+header {
+    width: 100%;
+    /* background: red; */
+    position: fixed;
+    z-index: 20;
+}
+
+header.on {
+    background: #222;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+header .inner-header {
+    /* background: orange; */
+    width: 92%;
+    height: 120px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .inner-header .logo {
+    /* background: greenyellow; */
+    flex: 1;
+}
+
+header .inner-header .logo a {
+    display: block;
+    width: 100%;
+}
+
+header .inner-header .logo a img {
+    height: 60px;
+}
+
+header .inner-header .intro-text {
+    /* background: tomato; */
+    flex: 4;
+    margin-left: 40px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header .inner-header .menu-open {
+    /* background: skyblue; */
+    flex: 1;
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .inner-header .menu-open .lnr-menu {
+    display: block;
+    font-size: 33px;
+    margin-left: 15px;
+}
+
+
+/* navigation bar */
+header .gnb {
+    background: #000;
+    height: 100vh;
+    color: #666;
+    font-size: 40px;
+    padding: 70px 100px;
+    box-sizing: border-box;
+
+    position: absolute;
+    right: -100%;
+    top: 0;
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    transition: 0.6s;
+}
+
+header .gnb.on {
+    right: 0;
+}
+
+header .gnb .close {
+    display: block;
+    color: #fff;
+}
+
+header .gnb ul {
+    margin-right: 200px;
+}
+
+header .gnb ul li {
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+header .gnb ul li:first-child, header .gnb ul li:hover {
+    color: #fff;
+}
+
+
+/* section visual */
+section.visual .slide li {
+     width: 100%;
+     height: 100vh;
+     background: #222;
+     position: relative;
+     overflow: hidden;
+}
+
+section.visual .slide li img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+section.visual .slide li .txt {
+    /* background: blue; */
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translatey(-50%);
+
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 2px 2px 5px rgba(0,0,0, .8);
+}
+
+section.visual .slide li .txt h3 {
+    font-size: 64px;
+    margin: 30px 0;
+    line-height: 1.3;
+}
+
+section.visual .slide li .txt a {
+    display: inline-block;
+    /* background: blue; */
+}
+
+section.visual .slide li .txt span {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+section.visual .slide li .scroll {
+    position: absolute;
+    left: 50px;
+    bottom: 10%;
+
+    color: #ccc;
+    font-size: 14px;
+    font-weight: 700;
+
+    transform: rotate(-90deg);
+}
+
+/* slick 이전 다음 버튼 스타일 변경 */
+.slick-arrow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #fff;
+    border: none;
+    z-index: 5;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.slick-arrow.slick-prev {
+    bottom: 60px;
+}
+
+.slick-arrow::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #888;
+    font-size: 20px;
+    left: 0;
+    top: 0;
+    text-indent: 0;
+    font-weight: 300;
+}
+
+.slick-arrow.slick-next::after {
+    content: '>';
+}
+.slick-arrow.slick-prev::after {
+    content: '<';
+}
+
+.slick-arrow:hover {
+    background: #cccccc;
+    transform: all .5s;
+}
+
+.slick-arrow:hover::after {
+    font-size: 28px;
+    color: #333333;
+    transition: all .2s;
+}
+
+.slick-active .txt p {
+    animation: txt1 .8s;
+}
+@keyframes txt1 {
+    0% {opacity: 0; transform: rotateX(180deg) translateY(-150px); }
+    20% {opacity: 0; transform: rotateX(180deg) translateY(-150px); }
+    100% {opacity: 1; transform: rotateX(0) translateY(0); }
+}
+
+.slick-active .txt a {
+    animation: txt2 .8s;
+}
+@keyframes txt2 {
+    0% {opacity: 0; transform: rotateX(180deg) translateY(150px); }
+    20% {opacity: 0; transform: rotateX(180deg) translateY(150px); }
+    100% {opacity: 1; transform: rotateX(0) translateY(0); }
+}
+
+.slick-active .txt h3 {
+    animation: txt3 .7s;
+}
+@keyframes txt3 {
+    0% {transform: translateX(0); }
+    40% {transform: translateX(-50px); }
+    100% {transform: translateX(0); }
+}
+
+.slick-active .scroll {
+    animation: scroll 1s;
+}
+@keyframes scroll {
+    0% {opacity: 0; left: -100px; }
+    30% {opacity: 0; left: -100px; }
+    100% {opacity: 1; left: 50px; }
+}
+
+section.visual .slick-active img {
+    animation: img 1s;
+}
+@keyframes img {
+    0% {opacity: 0; left: -80px; transform: scale(0.95) }
+    100% {opacity: 1; left: 0; }
+}
+
+/* section contents */
+section.contents {
+    background: #1b1b1b;
+    padding: 120px 0;
+    height: 800px;
+}
+
+/* section contents > .main-text */
+section.contents .main-text {
+    /* background: yellow; */
+    width: 1170px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 25px;
+
+    display: flex;
+    position: relative;
+}
+
+section.contents .main-text::before {
+    content: "";
+    background: yellowgreen;
+    width: 100px;
+    height: 100px;
+    border-radius: 0%;
+    position: absolute;
+    left: 70px;
+    top: 130px;
+}
+
+section.contents .main-text::after {
+    content: "M";
+    font-size: 150px;
+    color: white;
+    opacity: 0.7;
+    position: absolute;
+    left: 0;
+    top: 100px;
+}
+
+section.contents .main-text h3 {
+    /* background: red; */
+    flex: 1;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+section.contents .main-text p {
+    /* background: blue; */
+    flex: 1.5;
+    line-height: 1.4;
+}
+
+section.contents .main-text p span {
+    display: block;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #999;
+}
+
+/* section contents > .project */
+section.contents .project {
+    color: #fff;
+}
+
+section.contents span a {
+    display: block;
+    font-size: 18px;
+}
+
+section.contents span a span.btn {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+
+section.contents .project .top {
+    width: 1170px;
+    margin: 130px auto 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.contents .project .top h3 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+section.contents .project .top a {
+    display: block;
+    font-size: 18px;
+}
+section.contents .project .top a span {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+section.contents .project ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section.contents .project ul li {
+    height: 400px;   
+    position: relative;
+}
+
+section.contents .project ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section.contents .project ul li a img {
+    width: 100%;
+    height: 100%;
+}
+
+section.contents .project ul li a .name {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    background: #1b1b1b;
+    padding: 15px;
+    width: 250px;
+    text-align: right;
+    font-size: 22px;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+
+section.contents .project ul li a:hover .name {
+    opacity: 1;
+    animation: title-rise-up 1s;
+}
+@keyframes title-rise-up {
+    0% {
+        opacity: 0;
+        bottom: -10%;
+    }
+    100% {
+        opacity: 1;
+        bottom: 10px;
+    }
+}
+
+section.contents .project ul li a .name span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+section.contents .project ul li a .name h3 {
+    text-transform: uppercase;
+}
+
+section.contents .project ul li a::before {
+    content: "";
+    background: rgba(27,27,27, .9);
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.6s;
+}
+
+section.contents .project ul li a:hover::before {
+    width: 100%;
+}
+
+
