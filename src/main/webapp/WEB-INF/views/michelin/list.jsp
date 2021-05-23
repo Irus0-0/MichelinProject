@@ -51,10 +51,6 @@
             margin: auto;
         }
 
-        .table-common .btn-box {
-            text-align:center;
-        }
-
         .table-common>table th, .table-common>table td {
             border: 1px solid black;
             padding: 10px;
@@ -118,14 +114,6 @@
             border-bottom:1px solid lightgray;
             text-align:center;
         }
-
-        .article-detail > .article-writer .writer-icon {
-            margin:0 auto;
-            background-color:white;
-            width:80px;
-            height:80px;
-            border-radius:50%;
-        } */
 
         .reply {
             margin-top:20px;
