@@ -24,8 +24,12 @@ com/spring/mvc/web/config/DataBaseConfig.java
  com.spring.mvc.web.config.DataBaseConfig
 com/spring/mvc/web/michelin/controller/cmMichelinController.java
  com.spring.mvc.web.michelin.controller.cmMichelinController
+com/spring/mvc/web/michelin/controller/michelinController.java
+ com.spring.mvc.web.michelin.controller.michelinController
 com/spring/mvc/web/michelin/controller/IndexController.java
  com.spring.mvc.web.michelin.controller.IndexController
+com/spring/mvc/web/michelin/service/michelinService.java
+ com.spring.mvc.web.michelin.service.michelinService
 com/spring/mvc/web/michelin/service/michelinService.java
  com.spring.mvc.web.michelin.service.michelinService
 com/spring/mvc/web/michelin/controller/michelinController.java

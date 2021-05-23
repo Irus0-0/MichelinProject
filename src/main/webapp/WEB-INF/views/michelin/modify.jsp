@@ -110,7 +110,7 @@
 		font-size: 1.2rem;
 	}
 
-	html, body { 
+	html, body {
 		overflow-x: hidden;
 	}
 
@@ -122,16 +122,16 @@
 	}
 
 	h1.con {
-		  margin-left: 35%;
+		  margin-left: 40%;
 	}
 
 	.table-common>table th, .table-common>table td {
 		border: 1px solid black;
 		padding: 5px;
-	}  
+	}
 
 	.article-list table {
-		border:none;   
+		border:none;
 		border-top:2px solid lightgray;
 		border-bottom:2px solid lightgray;
 	}
@@ -178,7 +178,7 @@
 	}
 
 	.article-detail > table td:last-child {
-		padding-right:45px;
+		padding-right:33px;
 	}
 
 	.article-detail > .article-writer {
@@ -269,7 +269,7 @@
 	}
 
 	.reply-list > table td {
-		border:none; 
+		border:none;
 	}
 
 	.reply-list > table tr:nth-child(2n+1) {
@@ -299,42 +299,38 @@
 </head>
 <body>
 
-	<!-- 게시물 리스트 조회영역 -->
 	<br>
 	<br>
-	<h1 class="con">${michelin.board_num}번 평가내용 수정</h1>
+	<h1 class="con">${michelin.board_num}번 평가!</h1>
 	<br>
-	<form action="/michelin/modify" method="post">
-		<input type="hidden" name="board_num" value="${michelin.board_num}">
+	<form action="/michelin/modify" method="post"></form>
 		<section class="article-detail table-common con row">
-			<div class="article-writer cell">
-
-			</div>
 			<table class="cell" border="1">
 				<colgroup>
 					<col width="100px">
 				</colgroup>
 				<tbody>
 					<tr class="article-title">
-						<th>${michelin.board_num}번</th>
-						<td colspan="5"><input type="text" name="title" value="${michelin.title}"></td>
-						<th>
-                            <td colspan="5"><input type="submit" value="수정"></td>
-                        </th>
+						<th>제목</th>
+						<td colspan="5"><input type="text" name="title" value="${michelin.title}" placeholder="제목을 입력하세요."></td>
+						<th>작성자</th>
+						<td colspan="2"><input type="text" name="writer" value="${michelin.writer}" placeholder="닉네임을 입력하세요."></td>
+						<td></td>					
 					</tr>
 					<tr class="article-info">
 						<th>한줄평</th>
-						<td><input type="text" name="one_cm" value="${michelin.title}"></td>
+						<td><input type="text" name="one_cm" value="${michelin.one_cm}" placeholder="20자 내외로 입력하세요."></td>
 						<th>별점</th>
-						<td colspan="2"><input type="number" min="0.0" max="10.0" step="0.1"name="star" value="${michelin.star}"></td>
-						<th>작성자</th>
-						<td colspan="4"><input type="text" name="writer" value="${michelin.writer}"></td>
+						<td colspan="4"><input type="number" min="0.0" max="10.0" step="0.1"name="star" value="${michelin.star}" placeholder="별점"></td>
+						<th>
+							<td colspan="5"><input type="submit" value="수정"></td>
+						</th>
 					</tr>
 					<tr class="article-body">
 						<td colspan="4">
 						<div class="content">
 							<div class="textcontent">
-								<textarea rows="10" cols="50" name="content">${michelin.content}</textarea>	
+								<textarea rows="10" cols="50" name="content" placeholder="내용을 입력하세요.">${michelin.content}</textarea>	
 							</div>
 							</div>
 						</div>
@@ -344,7 +340,8 @@
 			</table>
 		</section>
 	</form>
-	
+
+
 
     <!-- <h1>${michelin.board_num}번 평가 내용 수정</h1>
 <form action="/michelin/modify" method="post">
@@ -359,11 +356,16 @@
 		<br>
 		<input type="submit" value="수정">
 	</p>
-</form> -->
+</form>
+
+<a href="/michelin/list">글 목록보기</a>&nbsp;
+
+</form>  -->
 <br>
 <br>
 <div class="link">
 	<a href="/michelin/list">글 목록보기</a>&nbsp;
+
 	<!-- <a href="/michelin/modify">글 수정하기</a> -->
 </div>
 
