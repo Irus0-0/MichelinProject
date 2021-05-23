@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 검색엔진 최적화 (SEO) -->
+    <meta name="author" content="Michelin">
+    <meta name="description" content="Michelin List">
+
+
+    <title>Michelin List</title>
+
+    <!-- recet css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <!-- linear icons -->
+    <!-- https://linearicons.com/free#cdn -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <!-- animate css || https://animate.style -->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- slick css || https://kenwheeler.github.io/slick/ -->
+    <link rel="stylesheet" href="css/slick.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- libraries -->
+    <!-- scrolla js -->
+    <script src="js/scrolla.jquery.min.js" defer></script>
+    <!-- slick js -->
+    <script src="js/slick.min.js" defer></script>
+
+    <!-- custom js -->
+    <script src="js/config.js" defer></script>
+    <script src="js/gnb-event.js" defer></script>
+    <script src="js/scroll-event.js" defer></script>
+</head>
+<body>
+    
+    <div class="wrap">
+
+        <!-- section visual -->
+        <section class="visual">
+            <ul class="slide">
+                <li>
+                    <img src="img/visual1.jpg" alt="슬라이드 이미지1">
+                    <div class="txt">
+                        <p>ALL AROUND PLACE</p>
+                        <h3>Michelin <br>Information <br>List </h3>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/visual2.jpg" alt="슬라이드 이미지1">
+                    <div class="txt">
+                        <p>ALL AROUND PLACE</p>
+                        <h3>Michelin <br>Information <br>List </h3>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/visual3.jpg" alt="슬라이드 이미지2">
+                    <div class="txt">
+                        <p>ALL AROUND PLACE</p>
+                        <h3>Michelin <br>Information <br>List </h3>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/visual4.jpg" alt="슬라이드 이미지4">
+                    <div class="txt">
+                        <p>ALL AROUND PLACE</p>
+                        <h3>Michelin <br>Information <br>List </h3>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/visual5.jpg" alt="슬라이드 이미지5">
+                    <div class="txt">
+                        <p>ALL AROUND PLACE</p>
+                        <h3>Michelin <br>Information <br>List </h3>                      
+                    </div>
+
+                </li>
+            </ul>
+        </section>
+        <!-- //section visual -->
+
+         <!--  section contents   -->
+         <section class="contents">
+            <!-- section contents main-text -->
+            <div class="main-text animate" data-animate="fadeInUp" data-duration="1s">
+                <h3>The world is wide and <br> there are many delicious foods.</h3>
+                <p>"세상은 넓고, 맛있는 음식은 많다."<br class="mo">
+                     전 세계 어디든, 전국 어디든  <br class="mo">
+                     저희 미슐랭 리스트에 기억에 남는곳을 남겨주신다면<br class="mo">
+                     모든 사람들과 행복을 나눌 수 있게 됩니다.
+                    <span class="bottom">
+                        <a href="/michelin/list">See More</a>
+                    </span>
+                </p>
+            </div>
+            <!-- //section contents main-text -->
+
+            <!-- section contents > .project -->
+            <div class="project">
+                <div class="top">
+                    <h3 class="animate" data-animate="fadeInLeft" data-duration="1s" data-delay="0.5s">Popular <br>Michelin List</h3>
+                    <a href="/michelin/list">More List
+                        <span class="lnr lnr-chevron-right"></span>
+                    </a>
+                </div>
+                <ul class="animate" data-animate="fadeInUp" data-duration="0.6s">
+                    <li>
+                        <div>${starRank.Michelin}</div>
+                        <a href="/michelin/content?board_num=${board_num}">
+                            <img src="img/project1.jpg" alt="project1">
+                            <div class="name">
+                                <span>★ 5.0</span>
+                                <h3>크래프트 피피</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/project2.jpg" alt="project2">
+                            <div class="name">
+                                <span>★ 5.0</span>
+                                <h3>김밥천국</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/project3.png" alt="project3">
+                            <div class="name">
+                                <span>★ 4.5</span>
+                                <h3>바로그집</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/project4.jpg" alt="project4">
+                            <div class="name">
+                                <span>★ 4.5</span>
+                                <h3>초가집</h3>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- section contents > .project-->
+        <!-- footer-->
+        <!-- <footer>
+            <ul>
+                <li>Hong Studio<br>사업자등록번호:123-12-12345 <br>대표자:홍길동</li>
+                <li>
+                    <span>A : </span>대전 서구 계룡로 637<br>
+                    <span>T : </span>010.1234.1234<br>
+                    <span>E : </span>abc123@abc.co.kr<br>
+                </li>
+                <li> &#xa9 Hong Studio 2021 <br>All Rights Reseved</li>
+            </ul>
+            <a href="#top" class="go-top hide"><span class="lnr lnr-arrow-up"></span></a>
+        </footer> -->
+        <!-- //footer -->
+         </section>
+    </div>
+
+</body>
+</html>

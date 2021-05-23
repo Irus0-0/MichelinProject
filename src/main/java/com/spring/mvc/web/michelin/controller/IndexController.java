@@ -21,14 +21,14 @@ public class IndexController {
     public IndexController(michelinService michelinService) {
         this.michelinService = michelinService;
     }
-    //아직 오류 있음
-    @GetMapping("")
-        public String index(Model model) {
-        List<Michelin> starMichelinList = michelinService.getStarMichelinList();
-        model.addAttribute("starRank",starMichelinList);
-        log.info(starMichelinList);
-        return "";
-    }
+//    //아직 오류 있음
+//    @GetMapping("")
+//        public String index(Model model) {
+//        List<Michelin> starMichelinList = michelinService.getStarMichelinList();
+//        model.addAttribute("starRank",starMichelinList);
+//        log.info(starMichelinList);
+//        return "redirect:/index.html";
+//    }
 
     @GetMapping("/content")
     public String testing(int board_num, Model model) {
