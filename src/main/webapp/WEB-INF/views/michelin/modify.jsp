@@ -303,7 +303,8 @@
 	<br>
 	<h1 class="con">${michelin.board_num}번 평가!</h1>
 	<br>
-	<form action="/michelin/modify" method="post"></form>
+	<form action="/michelin/modify" method="post">
+		<input type="hidden" name="board_num" value="${michelin.board_num}">
 		<section class="article-detail table-common con row">
 			<table class="cell" border="1">
 				<colgroup>
