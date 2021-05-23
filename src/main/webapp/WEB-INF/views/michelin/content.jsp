@@ -96,7 +96,7 @@
 		/* 커스텀 */
 		/* 반응형 레이아웃 */
 		.con {
-			max-width: 800px;
+			max-width: 750px;
 		}
 
 		.con-min-width {
@@ -167,7 +167,7 @@
         }
 
         .article-detail > table tr:not(.article-body), .article-detail > table tr:not(.article-body) > td{
-            height:20px;
+            height:30px;
             font-size:0.8rem;
         }
 
@@ -178,16 +178,46 @@
         }
 
         .article-detail > table td:last-child {
-            padding-right:100px;
+            padding-right:30px;
         }
 
         .article-detail > .article-writer {
             width:100px;
-            height:102px;
+            height:90px;
             background-color:lightgray;
             border-bottom:1px solid lightgray;
             text-align:center;
         }
+
+		.link {
+			margin-left: 45%;
+		}
+
+		.link > a{
+			text-decoration: none;
+			color: #000;
+		}
+
+		.link > a:hover {
+			color: yellowgreen;
+			font: bold;
+		}
+
+		.content {
+			width: 350px;
+			height: 200px;
+		}
+
+		.content > div {
+			display:flex;
+			height:200px;
+			text-align: center;
+		}
+
+		.content > div > .textcontent{
+			width: 400px;
+			margin: 15px 15px;
+		}
 
         .reply {
             margin-top:20px;
@@ -205,22 +235,32 @@
         }
 
         .reply-form > form textarea {
-            width:calc(100% - 100px);
+            width:calc(40% - 90px);
             min-height:40px;
         }
 
+		.comment {
+			display: flex;
+		}
+
+		.cmtitle {
+			margin-right: 10px;
+		}
+
         .reply-form > form input[type="submit"] {
-            width:80px;
+            width:100px;
             height:40px;
-            transform:translatey(-40%);
+			margin-left: 90px;
+            transform:translatey(100%);
         }
 
         .reply-form > form > div:not(:last-child) {
             margin-bottom:5px;
         }
 
-        .reply-list > table {
-            border:none;
+		.reply-list > table {
+            border: none;
+           width: 700px;
         }
 
         .reply-list > table th {
@@ -228,7 +268,7 @@
         }
 
         .reply-list > table td {
-            border:none;
+            border:none; 
         }
 
         .reply-list > table tr:nth-child(2n+1) {
@@ -240,13 +280,25 @@
         }
 
         .reply-list > table td:first-child::after {
-            content:" : ";
+            content:"";
             font-weight:bold;
         }
+
+		td.link {
+			text-decoration: none;
+			color: #2c2c2c;
+		}
+
+		td.link:hover {
+			font-weight: bold;
+			color: yellowgreen;
+		}
+
 	</style>
 </head>
 
 <body>
+	<!-- 게시물 리스트 조회영역 -->
 	<br>
 	<br>
 	<h1 class="con">${michelin.board_num}번 평가!</h1>
@@ -262,70 +314,90 @@
             <tbody>
                 <tr class="article-title">
                     <th>${michelin.board_num}번</th>
-                    <td colspan="3">${michelin.title}</td>
+                    <td colspan="5">${michelin.title}</td>
                 </tr>
                 <tr class="article-info">
-                    <th>별점</th>
-                    <td>${michelin.star}</td>
                     <th>한줄평</th>
                     <td>${michelin.one_cm}</td>
+                    <th>별점</th>
+                    <td>${michelin.star}</td>
 					<th>작성자</th>
                     <td>${michelin.writer}</td>
                 </tr>
                 <tr class="article-body">
-                    <td colspan="4">${michelin.content}</td>
+                    <td colspan="4">
+                      <div class="content">
+                        <div "content_text">
+                          <div class="textcontent">
+                            ${michelin.content}
+                          </div>
+                        </div>
+                      </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </section>
+	<!-- 댓글입력 영역 -->
+	<br>
+	<div class="con reply">
+		<h4 class="">댓글 입력</h4>
+		<section class="reply-form">
+		   <form action="/cmmichelin/write" method="post">
+			  <div class="comment">
+				 <input type="hidden" name="board_num" value="${michelin.board_num}">
+				 <span class="cmtitle">작성자</span> <textarea rows="5" cols="30" name="cm_writer">${cmmichelin.writer}</textarea>
+				 <span class="cmtitle">내용</span><textarea rows="5" cols="30" name="cm_content">${cmmichelin.content}</textarea>
+				 <input type="submit" value="등록">
+				 <br>
+			  </div>
+		   </form>
+		</section>
+		<br>
+		<h4>댓글 목록</h4>
+		<br>
+		<section class="reply-list table-common">
+		   <table border="1">
+			  <colgroup>
+				 <col width="100px">
+			  </colgroup>
+			  <thead>
+				 <tr>
+					<td>작성자</td>
+					<td>댓글내용</td>
+					<td>비고</td>
+				 </tr>
+			  </thead>
+  
+			  <tbody>
+				 <c:forEach var="cmMichelin" items="${cmMichelin}">
+					<tr>
+					   <td>${cmMichelin.cm_writer}</td>
+					   <td>${cmMichelin.cm_content}</td>
+					   <td class="link">
+						  <a
+							 href="/cmmichelin/delete?board_num=${michelin.board_num}&cm_num=${cmMichelin.cm_num}">[삭제]</a>
+					   </td>
+					</tr>
+				 </c:forEach>
+			  </tbody>
+		   </table>
+		</section>
+	 </div>
 
-	<!-- <h1> ${michelin.board_num}번 평가!</h1> -->
+	 <br>
 
-	<!-- <p> -->
-		<!-- # 글번호: ${michelin.board_num}<br> -->
-		<!-- # 작성자: ${michelin.writer}<br> -->
-		<!-- # 제목: ${michelin.title}<br> -->
-		<!-- # 별점: ${michelin.star}<br> -->
-		<!-- <%-- # 추천수:${michelin.recommendation} <br>
-	# 조회수:${michelin.view} <br> --%> -->
-		<!-- # 한줄평: ${michelin.one_cm}<br> -->
-		<!-- # 내용: <br>
-		<textarea rows="5" cols="30" disabled>${michelin.content}</textarea>
-	</p> -->
-
-	<a href="/michelin/list">글 목록보기</a>&nbsp;
-	<a href="/michelin/modify?board_num=${michelin.board_num}">글 수정하기</a>
-	<%-- <a href="/michelin/recommendation?board_num=${michelin.board_num}">글 추천</a> --%>
-
-	<!-- <form action="/cmmichelin/write" method="post">
-		<input type="hidden" name="board_num" value="${michelin.board_num}">
-        <p>
-            # 작성자: <input type="text" name="cm_writer">${cmmichelin.writer}<br>
-            # 내용: <br>
-            <textarea rows="5" cols="30" name="cm_content">${cmmichelin.content}</textarea>
-            <br>
-            <input type="submit" value="등록">
-        </p>
-    </form> -->
-
-    <!-- <h4>댓글보기</h4>
-    <table border="1">
-        <tr>
-            <td>작성자</td>
-            <td>댓글내용</td>
-			<td>비고</td>
-        </tr>
-
-		<a href="#">${List}</a>
-		<c:forEach var="cmMichelin" items="${cmMichelin}">
-            <tr>
-				<td>${cmMichelin.cm_writer}</td>
-                <td>${cmMichelin.cm_content}</td>
-				<td>
-                    <a href="/cmmichelin/delete?board_num=${michelin.board_num}&cm_num=${cmMichelin.cm_num}">[삭제]</a>
-                </td>
-			</tr>
-		</c:forEach> -->
+	 <div class="link">
+		<a href="/michelin/list">글 목록보기</a>&nbsp;
+		<a href="/michelin/modify?board_num=${michelin.board_num}">글 수정하기</a>
+	 </div>
+	 <br>
+	 <br>
+	 <br>
+	 <br>
+	 <br>
+	 <br>
+	 <br>
 		
 
 </body>
