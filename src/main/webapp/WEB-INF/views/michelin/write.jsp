@@ -341,8 +341,7 @@
 	<br>
 	<h1 class="con">평가 등록하기</h1>
     <br>
-	<form action="/michelin/modify" method="post">
-		<input type="hidden" name="board_num" value="${michelin.board_num}">
+	<form action="/michelin/write" method="post">
 		<section class="article-detail table-common con row">
 			<!-- <div class="article-writer cell">
 
@@ -352,6 +351,7 @@
 					<col width="100px">
 				</colgroup>
 				<tbody>
+					
 					<tr class="article-title">
 						<th>제목</th>
 						<td colspan="5"><input type="text" name="title" value="${michelin.title}" placeholder="제목을 입력하세요."></td>
