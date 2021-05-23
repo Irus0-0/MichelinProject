@@ -4,14 +4,8 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="/css/main.css">
-    <title>Insert title here</title>
-    <style>
+    <head>
+     <style>
 		.pagination {
 			width: 60%;
 			margin-top: 10px;
@@ -53,36 +47,7 @@
 
     <li>총 게시글 수 : ${count}개</li>
 
-    <!-- <div class="all">
-        <li class="border">
-          <div class="michelin-item">
-            <div class="cover"></div>
-            <div class="info">
-              <p class="onecm">
-                  ${michelin.one_cm}
-              </p>
-              <p class="writer">${michelin.writer}</p>
-            </div>
-          </div>
-        </li>
-    </div> -->
-
-
-    <!-- <div class="all">
-        <li class="border flip">
-          <div class="michelin-item">
-            <div class="cove"></div>
-            <div class="info">
-              <p class="onecm>
-                <a href="/michelin/content?board_num=${michelin.board_num}">${michelin.one_cm}</a>
-              </p>
-              <p class="cmwriter">${michelin.writer}</p>
-            </div>
-          </div>
-        </li>
-    </div> -->
-
-     <table border="1"> 
+      <table border="1"> 
          <tr>
             <td>글번호</td>
             <td>작성자</td>
@@ -110,7 +75,7 @@
                 </td>
             </tr>            
         </c:forEach>
-    </table> 
+    </table>  
 
     <!-- 페이지 영역 -->
     <ul class="pagination">
