@@ -75,7 +75,7 @@
     <!--    글 수정-->
     <update id="modify">
         UPDATE michelin
-        SET title = #{title} , content = #{content}, writer = #{writer}, star = #{star}
+        SET title = #{title} , content = #{content}, writer = #{writer}, star = #{star}, one_cm = #{one_cm}
         WHERE board_num = #{board_num}
     </update>
 
